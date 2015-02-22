@@ -34,7 +34,7 @@ $(BUILD_PREFIX)/matlab/addpath_sedumi.m :
 	@mkdir -p $(BUILD_PREFIX)/matlab
 	echo "Writing $(BUILD_PREFIX)/matlab/addpath_sedumi.m"
 	echo "function addpath_sedumi()\n\n \
-	  root = fullfile('$(shell pwd)','sedumi');\n \
+	  root = fullfile('$(shell pwd)','$(UNZIP_DIR)');\n \
 		addpath(fullfile(root));\n \
 		end\n \
 		\n" \
@@ -44,7 +44,7 @@ $(BUILD_PREFIX)/matlab/rmpath_sedumi.m :
 	@mkdir -p $(BUILD_PREFIX)/matlab
 	echo "Writing $(BUILD_PREFIX)/matlab/rmpath_sedumi.m"
 	echo "function rmpath_sedumi()\n\n \
-		root = fullfile('$(shell pwd)','sedumi');\n \
+		root = fullfile('$(shell pwd)','$(UNZIP_DIR)');\n \
 		addpath(fullfile(root));\n \
 		end\n \
 		\n" \
